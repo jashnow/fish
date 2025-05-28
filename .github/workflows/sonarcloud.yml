@@ -14,11 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Run SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarqube-scan-action@master
         with:
-          args: >
-            -Dsonar.projectKey=jashnow
-            -Dsonar.organization=jashnow
-            -Dsonar.sources=.
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          projectKey: jashnow
+          organization: jashnow
+          token: ${{ secrets.SONAR_TOKEN }}
