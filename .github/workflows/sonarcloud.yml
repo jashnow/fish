@@ -29,5 +29,4 @@ jobs:
             -Dsonar.projectKey=jashnow
             -Dsonar.organization=jashnow
             -Dsonar.sources=.
-            -Dsonar.login=${{ secrets.5066a43a005d46e625b6e982087acb39d1a35962 }}
-
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
