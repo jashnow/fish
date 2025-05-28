@@ -18,6 +18,7 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1
         with:
+          projectBaseDir: .
           args: >
             -Dsonar.projectKey=jashnow
             -Dsonar.organization=jashnow
