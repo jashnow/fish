@@ -5,13 +5,14 @@ on:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
 
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: SonarCloud Scan
